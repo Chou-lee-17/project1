@@ -1,0 +1,292 @@
+body {
+    margin: 0;                        /* Bỏ khoảng cách mặc định quanh trang */
+    font-family: Arial, sans-serif;  /* Đặt font chữ cho toàn bộ trang */
+  }
+  
+  /* Khung chứa menu */
+  .Menu {
+    background-color: #222;           /* Màu nền tối cho thanh menu */
+    overflow-x: auto;                 /* Cho phép thanh cuộn ngang nếu menu quá dài */
+    white-space: nowrap;              /* Không xuống dòng, các mục menu luôn nằm trên 1 hàng */
+  }
+  
+  /* Các mục menu */
+  .Menu  a {
+    display: inline-block;            /* Hiển thị các link menu thành khối nhỏ, nằm ngang hàng */
+    color: #ccc;                     /* Màu chữ mặc định (xám nhạt) */
+    text-align: center;              /* Căn giữa chữ trong mỗi mục menu */
+    padding: 14px 16px;              /* Khoảng cách bên trong (trên/dưới 14px, trái/phải 16px) để menu rộng và dễ bấm */
+    text-decoration: none;           /* Bỏ gạch chân mặc định của link */
+    font-weight: bold;               /* Chữ in đậm */
+    font-size: 14px;                 /* Kích thước chữ 14px */
+  }
+  
+  /* Mục menu đang được chọn (active) */
+  .Menu  a.active {
+    background-color: #4CAF50;       /* Màu nền xanh lá nổi bật cho mục được chọn */
+    color: white;                    /* Màu chữ trắng cho dễ đọc trên nền xanh */
+  }
+  
+  /* Hiệu ứng khi rê chuột (hover) trên các mục không active */
+  .Menu  a:hover:not(.active) {
+    background-color: #555;          /* Màu nền xám đậm khi rê chuột */
+    color: white;                   /* Màu chữ trắng khi hover */
+  }
+  
+  /*bai2*/
+  body {
+    background-color: #fefefe;          /* Màu nền trắng rất sáng cho toàn trang */
+    font-family: Arial, sans-serif;    /* Font chữ phổ biến, dễ đọc */
+    margin: 40px;                      /* Khoảng cách cách đều các cạnh của trang */
+    color: #333;                      /* Màu chữ mặc định cho toàn trang là xám đậm */
+  }
+  
+  .exercise-container {
+    background-color: #2c3e50;         /* Màu nền tối xanh đậm cho khung bài tập */
+    color: #eee;                      /* Màu chữ sáng (xám nhạt) để nổi bật trên nền tối */
+    max-width: 600px;                 /* Giới hạn chiều rộng tối đa của khung bài tập */
+    margin: 0 auto 40px;              /* Canh giữa khung theo chiều ngang, cách dưới 40px */
+    border-radius: 10px;              /* Bo tròn các góc của khung */
+    padding: 20px 30px;               /* Khoảng cách bên trong khung (trên/dưới 20px, trái/phải 30px) */
+    box-sizing: border-box;           /* Bao gồm padding và border trong chiều rộng/chiều cao */
+    text-align: center;               /* Căn giữa toàn bộ nội dung trong khung */
+  }
+  
+  .exercise-container h2 {
+    margin: 0 0 10px;                 /* Không cách trên, cách dưới 10px */
+    font-weight: normal;              /* Chữ không in đậm */
+    font-size: 28px;                  /* Cỡ chữ lớn cho tiêu đề */
+    position: relative;               /* Đặt vị trí tương đối, để dễ dàng đặt phần tử con vị trí tuyệt đối nếu cần */
+    display: inline-block;            /* Hiển thị tiêu đề như một khối nhỏ, ngang hàng */
+  }
+  
+  .question-mark {
+    font-size: 14px;                  /* Kích thước chữ nhỏ */
+    color: #95a5a6;                  /* Màu xám nhạt cho dấu hỏi */
+    margin-left: 6px;                /* Khoảng cách bên trái so với phần tử trước */
+    vertical-align: super;           /* Canh lên trên kiểu dấu mũ */
+    cursor: default;                 /* Con trỏ chuột bình thường, không phải pointer */
+  }
+  
+  .question {
+    font-weight: bold;               /* Chữ in đậm cho câu hỏi */
+    margin: 0 0 20px;                /* Cách dưới 20px, không cách trên và 2 bên */
+    font-size: 16px;                 /* Cỡ chữ vừa phải */
+  }
+  
+  form {
+    text-align: left;                /* Căn trái nội dung form */
+  }
+  
+  .option {
+    display: block;                  /* Hiển thị mỗi lựa chọn thành khối riêng biệt (xuống dòng) */
+    background-color: #34495e;       /* Nền màu xanh đậm */
+    margin-bottom: 10px;             /* Cách dưới mỗi lựa chọn 10px */
+    padding: 10px 15px;              /* Khoảng cách bên trong lựa chọn */
+    border-radius: 5px;              /* Bo tròn các góc của lựa chọn */
+    cursor: pointer;                 /* Con trỏ chuột dạng pointer khi hover để biết là có thể click */
+    color: #ccc;                    /* Màu chữ xám nhạt */
+    font-family: monospace;          /* Font chữ kiểu chữ máy (monospace) cho code dễ nhìn */
+    user-select: none;               /* Không cho phép người dùng bôi đen/chọn chữ trong lựa chọn */
+  }
+  
+  .option input[type="radio"] {
+    margin-right: 10px;              /* Khoảng cách bên phải radio button */
+    vertical-align: middle;          /* Căn giữa radio button so với chữ */
+    cursor: pointer;                 /* Con trỏ pointer khi hover trên radio */
+  }
+  
+  .option:hover {
+    background-color: hsl(143, 96%, 50%); /* Khi hover đổi nền sang màu xanh lá sáng */
+    color: white;                    /* Chữ đổi màu trắng khi hover */
+  }
+  
+  .submit-btn {
+    display: block;                  /* Hiển thị thành khối, chiếm toàn bộ chiều ngang */
+    margin: 20px auto 0;             /* Cách trên 20px, canh giữa ngang, không cách dưới */
+    background-color: #27ae60;       /* Màu nền xanh lá đậm cho nút */
+    border: none;                   /* Bỏ viền mặc định của nút */
+    color: white;                   /* Màu chữ trắng */
+    font-weight: bold;              /* Chữ in đậm */
+    padding: 12px 25px;             /* Khoảng cách bên trong nút */
+    border-radius: 5px;             /* Bo tròn góc nút */
+    cursor: pointer;                /* Con trỏ pointer khi hover nút */
+    font-size: 16px;                /* Cỡ chữ vừa phải */
+  }
+  
+  .submit-btn:hover {
+    background-color: #2ecc71;       /* Đổi màu nền sáng hơn khi hover */
+  }
+  
+  .see-all {
+    display: inline-block;           /* Hiển thị như khối nội tuyến để dễ căn chỉnh */
+    background-color: #27ae60;       /* Màu nền xanh lá đậm */
+    color: white;                   /* Màu chữ trắng */
+    padding: 10px 20px;             /* Khoảng cách bên trong */
+    border-radius: 5px;             /* Bo tròn góc */
+    text-decoration: none;          /* Bỏ gạch chân nếu đây là link */
+    font-weight: bold;              /* Chữ in đậm */
+    margin: 0 auto;                 /* Canh giữa ngang (có hiệu quả nếu cha có text-align: center) */
+    text-align: center;             /* Căn giữa chữ bên trong */
+    max-width: 200px;               /* Giới hạn chiều rộng tối đa */
+    font-size: 14px;                /* Cỡ chữ nhỏ hơn */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền mềm mại trong 0.3s */
+  }
+  
+  .see-all:hover {
+    background-color: #2ecc71;       /* Đổi màu nền sáng hơn khi hover */
+  }
+  
+  /*bai3*/
+  body {
+    font-family: Arial, sans-serif; /* Đặt font chữ chính cho toàn trang */
+    margin: 20px;                   /* Tạo khoảng cách bên ngoài cho body, cách mép trình duyệt 20px */
+  }
+  
+  h2 {
+    margin-bottom: 15px;            /* Khoảng cách dưới tiêu đề h2 là 15px để tách biệt nội dung */
+  }
+  
+  /* Style bảng */
+  .fancy-table {
+    border-collapse: collapse;     /* Gộp các đường viền bảng lại thành một, tránh viền kép */
+    width: 100%;                   /* Bảng chiếm 100% chiều rộng phần tử cha */
+    max-width: 700px;              /* Giới hạn chiều rộng tối đa bảng là 700px */
+  }
+  
+  .fancy-table th, .fancy-table td {
+    border: 1px solid #ddd;        /* Viền bảng màu xám nhạt, dày 1px */
+    padding: 10px 15px;            /* Khoảng cách bên trong ô: trên/dưới 10px, trái/phải 15px */
+    text-align: left;              /* Căn lề trái nội dung trong ô */
+  }
+  
+  /* Đổi màu nền header */
+  .fancy-table thead {
+    background-color: #27ae60;     /* Nền màu xanh lá cho phần tiêu đề bảng */
+    color: white;                  /* Màu chữ trắng cho tiêu đề */
+  }
+  
+  /* Đổi màu nền khi rê chuột trên từng dòng */
+  .fancy-table tbody tr:hover {
+    background-color: #ccc;        /* Màu nền xám sáng khi rê chuột lên dòng bảng */
+  }
+/*bai4*/  
+/* === Giao diện trang đăng nhập đơn giản, có ảnh và form === */
+
+body {
+    margin: 0; /* Xóa khoảng trắng mặc định */
+    font-family: Arial, sans-serif; /* Font chữ dễ đọc */
+    background: #f8f9fb; /* Nền sáng nhẹ */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao toàn màn hình */
+  }
+  
+  .container {
+    display: flex; /* Đặt ảnh và form cạnh nhau */
+    max-width: 900px; /* Chiều rộng tối đa */
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    background: white; /* Nền trắng */
+    border-radius: 10px; /* Bo góc khung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    overflow: hidden; /* Ẩn phần vượt ra ngoài (bo góc ảnh) */
+  }
+  
+  .campus-image {
+    width: 60%; /* Chiếm 60% khung */
+    object-fit: cover; /* Ảnh không bị méo, lấp đầy khung */
+  }
+  
+  .login-form {
+    width: 40%; /* Form chiếm 40% còn lại */
+    padding: 40px 30px; /* Khoảng cách bên trong */
+    box-sizing: border-box; /* Gộp padding vào kích thước */
+    font-size: 14px; /* Cỡ chữ chung */
+    color: #2c3e50; /* Màu chữ tối */
+  }
+  
+  .login-form h2 {
+    margin: 0 0 15px; /* Cách dưới 15px */
+    color: #003366; /* Màu xanh đậm */
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%; /* Ô nhập liệu rộng 100% */
+    padding: 8px 10px; /* Khoảng cách bên trong */
+    margin-bottom: 15px; /* Cách dưới mỗi ô */
+    border: 1px solid #ccc; /* Viền xám nhạt */
+    border-radius: 4px; /* Bo góc nhẹ */
+  }
+  
+  .checkbox-label {
+    display: flex; /* Hiển thị checkbox và chữ cùng dòng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    font-size: 13px; /* Nhỏ hơn chữ chính */
+    margin-bottom: 20px; /* Cách dưới */
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    margin-right: 8px; /* Cách checkbox và chữ */
+    cursor: pointer; /* Con trỏ hình tay khi hover */
+  }
+  
+  .login-btn {
+    width: 100%; /* Nút chiếm toàn bộ chiều ngang */
+    background: #003366; /* Màu nền xanh đậm */
+    color: white; /* Chữ trắng */
+    border: none; /* Không viền */
+    font-weight: bold; /* Chữ đậm */
+    padding: 12px 0; /* Cao 12px */
+    border-radius: 4px; /* Bo góc nhẹ */
+    cursor: pointer; /* Con trỏ hình tay */
+    margin-bottom: 15px; /* Cách dưới */
+    font-size: 15px; /* Kích thước chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover mượt */
+  }
+  
+  .login-btn:hover {
+    background: #002244; /* Màu nền tối hơn khi hover */
+  }
+  
+  .office365-btn {
+    width: 100%; /* Nút chiếm toàn bộ chiều ngang */
+    background: #fff; /* Nền trắng */
+    border: 1px solid #003366; /* Viền xanh đậm */
+    color: #003366; /* Chữ xanh đậm */
+    font-weight: bold; /* Chữ đậm */
+    padding: 10px 0; /* Cao 10px */
+    border-radius: 4px; /* Bo góc nhẹ */
+    cursor: pointer; /* Con trỏ tay */
+    margin-bottom: 15px; /* Cách dưới */
+    font-size: 14px; /* Kích thước chữ */
+    display: flex; /* Canh giữa nội dung */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover */
+  }
+  
+  .office365-btn:hover {
+    background: #e6f0ff; /* Màu nền sáng khi hover */
+  }
+  
+  .forgot-link {
+    font-size: 12px; /* Chữ nhỏ */
+    color: #999; /* Màu xám nhạt */
+    text-decoration: none; /* Bỏ gạch chân */
+  }
+  
+  .forgot-link:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+  }
+  
+  .login-form p {
+    font-size: 10px; /* Chữ rất nhỏ */
+    color: #ccc; /* Màu xám rất nhạt */
+    text-align: center; /* Căn giữa dòng chữ */
+    margin-top: 30px; /* Cách trên */
+  }
+  
+  
+  
