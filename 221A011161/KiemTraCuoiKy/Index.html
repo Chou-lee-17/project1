@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bệnh Viện</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<!-- đầu trang-->
+ <!-- Danh sách bệnh nhân-->
+<div class="header">
+    <div class="Hospital_img">
+        <img src="/KiemTraCuoiKy/Img/Article image.jpg" alt="Hình bệnh viện">
+    </div>
+</div>
+<div class="Dsbn">
+    <h1><b>Danh sách Bệnh Nhân</b></h1>
+        <table>
+            <tr>
+            <th>Mã bệnh nhân </th>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Hình đại diện</th>
+            <th>giới tính</th>
+            <th>triệu chứng</th>
+            <th colspan="2">Tùy Chọn</th>
+            </tr>
+            <tr>
+                <td>BN001</td>
+                <td>Nguyễn Văn A</td>
+                <td>30</td>
+                <td><img src="/KiemTraCuoiKy/Img/3ef1fcc3b6cbb97199f961bb0b3ead3f.jpg"></td>
+                <td>Nam</td>
+                <td>Sốt, ho</td>
+                <td><button>Xóa</button></td>
+                <td><button>Sửa</button></td>
+            </tr>
+            <tr>
+                <td>BN002</td>
+                <td>Lê văn b</td>
+                <td>20</td>
+                <td><img src="/KiemTraCuoiKy/Img/3ef1fcc3b6cbb97199f961bb0b3ead3f.jpg"></td>
+                <td>Nam</td>
+                <td>Sốt, ho</td>
+                <td><button>Xóa</button></td>
+                <td><button>Sửa</button></td>
+
+            </tr>
+    </table>
+</div>
+<!--Thêm bệnh nhân-->
+<div class="Tbn">
+<h2>Thêm bệnh nhân</h2  >
+<form>
+    <div class="form-row">
+        <label>Mã bệnh nhân:</label>
+        <input type="text" name="ma_benh_nhan"  id="maBN">
+    </div>
+
+    <div class="form-row">
+        <label>Họ tên:</label>
+        <input type="text" name="ho_ten" id="hoTen">
+    </div>
+
+    <div class="form-row">
+        <label>Tuổi:</label>
+        <input type="number" name="tuoi" id="tuoi">
+    </div>
+    <div class = " form-row">
+        <label> hình đại diện</label>
+        <input type="file" name="hinh_dai_dien" id="hinhDaiDien">
+    </div>
+
+    <div class="form-row">
+        <label>Giới tính:</label>
+        <input type="radio" name="gioi_tinh" value="Nam" id="nam"> Nam
+        <input type="radio" name="gioi_tinh" value="Nữ" id="nu"> Nữ
+    </div>
+    <div class="form-row">
+        <label>Triệu chứng:</label>
+        <textarea name="trieuChung" id="trieuChung"></textarea>
+
+    </div>
+
+    <button type="button" id="btnThem">Thêm bệnh nhân</button>
+</form>
+
+</div>
+</body>
+<script src="Script.js"></script>
+</html>
